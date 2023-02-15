@@ -6,15 +6,15 @@ string[] c = {"Russia", "Denmark", "Kazan"};
 
 string[] GetBackArray(string[] array)
 {   
-    string[] NewArray = new string[array.Length];
+    string[] newArray = new string[array.Length];
     for(int i = 0, j = 0; i < array.Length; i++) 
         
         if(array[i].Length <= 3) 
         {
-            NewArray[j] = array[i];
+            newArray[j] = array[i];
             j++;
         }
-    return NewArray; 
+    return newArray; 
 }
 
 void PrintArray(string[] array)
