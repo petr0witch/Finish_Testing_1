@@ -1,0 +1,24 @@
+string[] a = {"hello", "2", "world", ":-)"};
+string[] b = {"1234", "1567", "-2", "computer science"}; // Задаем массивы, с которыми будем работать
+string[] c = {"Russia", "Denmark", "Kazan"};
+
+string[] GetBackArray(string[] array)  // Первый метод, принимает масив
+{   
+    string[] newArray = new string[array.Length]; // Создаем новый массив, которых будет заполнять подходящими значениями
+    for(int i = 0, j = 0; i < array.Length; i++) 
+        
+        if(array[i].Length <= 3) // Задаем условие: длина элемента должна быть <= 3
+        {
+            newArray[j] = array[i];  // При соответствии записываем значение в новый массив
+            j++;
+        }
+    return newArray; // ВОзвращаем готовый новый массив, при переборе всех элементов
+}
+
+void PrintArray(string[] array) // Выводим новый массив
+{
+    for(int i = 0; i < array.Length; i++)
+        Console.Write($"{array[i]} ");
+}
+
+PrintArray(GetBackArray(a)); // Вызываем вывод нового массива через методы
